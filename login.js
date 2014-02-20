@@ -12,7 +12,7 @@ function Login() {
  * Say Hello {name} to the user
  */
 Login.prototype.hello = function(sessionId) {
-	return 'Hello ' + this.sessionMap[sessionId].name + '\n';
+	return 'Hello' + this.sessionMap[sessionId].name + '\n';
 };
 
 /**
@@ -42,9 +42,9 @@ Login.prototype.login = function(_name, _email) {
  */ 
 Login.prototype.logout = function(sessionId) {
 	console.log('logout::' + sessionId);
-   /*
-	* TODO: Remove the given sessionId from the sessionMap
-	*/
+	console.log(sessionId);
+	delete this.sessionMap[sessionId];
+	
 };
 
 // Export the Login class
